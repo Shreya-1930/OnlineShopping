@@ -1,0 +1,24 @@
+﻿@model List<OnlineShopping.Models.Product>
+    @if(Model != null)
+    {
+    @foreach (var r in Model)
+    {
+        <div class="col-md-4">
+            <img src=/@r.Pimage height="200px" />
+            <div>@r.Pid</div>
+            <div>@r.Pname</div>
+            <div>@r.Description</div>
+            <div>@r.Price</div>
+
+        </div>
+    }
+        
+    <form method="post">
+    <input type="text" name="qyt" class="form-control" placeholder="qyt" /><br />
+    <input type="submit" name="submit" />
+    </form> 
+       
+    
+    }
+
+@ViewData["msg"]

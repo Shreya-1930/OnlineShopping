@@ -1,0 +1,37 @@
+﻿@model OnlineShopping.Models.Register
+
+
+<div style="width:500px;margin-left:300px">
+<form method="post">
+    <input type="text" asp-for="Uname" class="form-control" placeholder="uname" />
+    <span class="btn btn-danger" asp-validation-for="Uname"></span>
+    <br/>
+        <input type="Password" asp-for="Password" class="form-control" placeholder="password" />
+        <span class="btn btn-danger" asp-validation-for="Password"></span>
+        <br />
+    male:<input type="radio" asp-for="Gender" value="true" />
+    female:<input type="radio" asp-for="Gender" value="false" />
+        <input type="Date" asp-for="Dob" class="form-control" placeholder="Dob" />
+        <span class="btn btn-danger" asp-validation-for="Dob"></span>
+        <br />
+        <input type="text" asp-for="Designation" class="form-control" placeholder="Designation" />
+        <span class="btn btn-danger" asp-validation-for="Designation"></span>
+        <br />
+        <input type="text" asp-for="Email" class="form-control" placeholder="email" />
+        <span class="btn btn-danger" asp-validation-for="Email"></span>
+        <br />
+        <input type="text" asp-for="Country" class="form-control" placeholder="country" />
+        <span class="btn btn-danger" asp-validation-for="Country"></span>
+        <br />
+
+        <input type="submit" class="btn btn-success" value="Register" />
+</form>
+</div>
+
+<div class="btn btn-info" >
+    @ViewData["msg"]
+</div>
+
+
+
+

@@ -1,0 +1,14 @@
+﻿
+
+<form method="post">
+    <input type="text" name="txt1" class="form-control" /><br />
+    <input type="password" name="txt2" class="form-control" /><br />
+
+    <input type="submit" value="login" class="btn btn-success" /><br />
+</form>
+<div>
+    @ViewData["msg"]
+</div>
+<a asp-controller="Onlineshop" asp-action="Register" class="btn btn-info">
+new user ? click here
+</a>

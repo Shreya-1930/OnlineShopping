@@ -1,0 +1,37 @@
+﻿
+@{
+}
+<a href="https://localhost:7234/home/Proclink">Proclink</a>
+<a href="https://localhost:7234/home/ShowDate">ShowDate</a>
+<h1>"hello world"</h1>
+@*mvc linking pages @*
+    method and controller name is given to link 
+*@
+<a  asp-controller="Home" asp-action="Proclink">Proclink </a>
+@* @{
+    foreach (var i in ViewBag.a)
+    {
+    <li>@i</li>
+    }
+}
+@{
+    foreach (var i in (string[]) ViewData["b"])
+    {
+        <li>@i</li>
+    }
+} *@
+@{
+    void hello(string[] data)
+    {
+        foreach (var item in data)
+        {
+            <li>@item</li>
+        }
+        <hr />
+    }
+}
+@{
+
+    hello((string[])ViewData["c1"]);
+    hello(ViewBag.c2);
+}
